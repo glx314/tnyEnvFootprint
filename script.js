@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Table Header
         const thead = document.createElement('thead');
         const headerRow = document.createElement('tr');
-        const headers = ['Transportation Mode', 'Distance (km)', 'CO₂ Emissions (kg)'];
+        const headers = ['Transportation Mode', 'Distance (km)', 'CO₂ Emissions / Passenger (kg)'];
 
         headers.forEach(text => {
             const th = document.createElement('th');
