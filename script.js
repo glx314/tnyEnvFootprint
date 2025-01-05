@@ -3,6 +3,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('footprint-form');
     const resultDiv = document.getElementById('result');
+    
+    // Call the displayProducts function to show the products
+    displayProducts();
 
     document.getElementById('toggleButton').addEventListener('click', function() {
         var advancedSettings = document.getElementById('advancedSettings');
@@ -190,7 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
             productItem.innerHTML = `
                 <img src="${product.image}" alt="${product.name}" loading="lazy">
                 <h3>${product.name}</h3>
-                <a href="${product.link}" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>
+                <a href="${product.link}" target="_blank" rel="noopener noreferrer">See price on Amazon</a>
             `;
 
             productsDiv.appendChild(productItem);
