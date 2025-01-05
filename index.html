@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Environmental Footprint Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Calculate and compare the environmental footprint of your travel across various transportation modes. Promote sustainable products through our recommendations.">
+    <meta name="keywords" content="Environmental Footprint, CO₂ Calculator, Sustainable Travel, Eco-Friendly, Carbon Emissions, Travel Calculator">
+</head>
+<body>
+    <header>
+        <h1>Travel Environmental Footprint Calculator</h1>
+        <p>Compare the CO₂ emissions of different transportation modes for your journey.</p>
+    </header>
+
+    <main>
+        <section id="calculator">
+            <h2>Calculate Your Travel Footprint</h2>
+            <form id="footprint-form">
+                <fieldset>
+                    <legend>Enter Distances (km) for Each Transportation Mode:</legend>
+                    
+                    <label for="distance-land">Car, Bus, Train:</label>
+                    <input type="number" id="distance-land" name="distance-land" min="0" step="0.1" placeholder="e.g., 100" required aria-label="Distance for Car, Bus, Train">
+
+                    <label for="distance-flight">Flight:</label>
+                    <input type="number" id="distance-flight" name="distance-flight" min="0" step="0.1" placeholder="e.g., 100" required aria-label="Distance for Short-haul Flight">
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Passengers</legend>
+                    <label for="passengers">Number of Passengers:</label>
+                    <input type="number" id="passengers" name="passengers" min="1" value="1" required aria-label="Number of Passengers">
+            </fieldset>
+
+                <fieldset>
+                    <legend>Advanced Settings: CO₂ Emissions per km (kg/km)</legend>
+
+                    <button id="toggleButton">Show Advanced Settings</button>
+                    <div id="advancedSettings" class="hidden">
+                    
+                        <label for="emission-car">Car:</label>
+                        <input type="number" id="emission-car" name="emission-car" min="0" step="0.001" value="0.192" required aria-label="CO2 Emissions per km for Car">
+
+                        <label for="emission-bus">Bus:</label>
+                        <input type="number" id="emission-bus" name="emission-bus" min="0" step="0.001" value="0.089" required aria-label="CO2 Emissions per km for Bus">
+
+                        <label for="emission-train">Train:</label>
+                        <input type="number" id="emission-train" name="emission-train" min="0" step="0.001" value="0.041" required aria-label="CO2 Emissions per km for Train">
+
+                        <label for="emission-flight">Flight (Short-haul):</label>
+                        <input type="number" id="emission-flight" name="emission-flight" min="0" step="0.001" value="0.254" required aria-label="CO2 Emissions per km for Short-haul Flight">
+                    </div>
+            </fieldset>
+
+                <button type="submit">Calculate</button>
+            </form>
+
+            <div id="result">
+                <!-- Emission results will be displayed here -->
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>Recommended Sustainable Travel Products</h2>
+            <div class="product-list">
+                <!-- Amazon products will be listed here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Travel Footprint Calculator</p>
+        <p><em>We may earn commissions from qualifying purchases through our affiliate links.</em></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
